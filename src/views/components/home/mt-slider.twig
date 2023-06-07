@@ -1,0 +1,84 @@
+{#
+| Variable                      | Type      | Description                                                         |
+|-------------------------------|-----------|---------------------------------------------------------------------|
+| items                         | array     | shared variable in all layout, index.twig, and all components views |
+| items[].title                 | string    | Section title                                                       |
+| items[].name                  | string    | Alias for title                                                     |
+| items[].type                  | string    | category,most_sales,latest_products,chosen_products                 |
+| items[].featured_product      | Product   |                                                                     |
+| items[].special_product.id    | string    | Product string id                                                   |
+| items[].special_product.title | string    | Product Name                                                        |
+| items[].products[]            | Product[] |                                                                     |
+| items[].limit                 | Int       | Number of products to be shown                                      |
+| items[].id                    | String    | Section id                                                          |
+| postion                       | int       | Sorting number starts from zero                                     |
+| is_slider                     | Bool      | Products should be movable or static                                |
+#}
+<div class="h-screen " style="background-image: url('{{ component.bg_image }}');">
+	<div class="mx-auto container  text-right">
+		{% for item in component.items %}
+			<div class="row">
+				<div class="text">
+					<p>{{item.title1}}</p>
+					<p>{{item.title2}}</p>
+					<p>{{item.title3}}</p>
+					<button class="btn">shop now</button>
+				</div>
+				<div class="image w-24">
+					<img src="{{item.big_image}}">
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>
+<div class="h-80 bg-slate-900 text-right">
+	<div class="responsive">
+		{% for item in component.items %}
+
+			<div class="imageSlider">
+				<img src="{{item.small_image}}">
+			</div>
+		{% endfor %}
+	</div>
+
+</div>
+<script>
+	$(document).ready(function () {
+$('.responsive').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+
+});
+</script>
