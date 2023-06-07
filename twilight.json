@@ -734,7 +734,99 @@
             "title": "mt-slider",
             "icon": "sicon-store",
             "path": "home.mt-slider",
-            "fields": []
+            "fields": [
+                {
+                    "id": "items",
+                    "key": "37877a2a-38ec-4ca1-9232-23ada494a36f",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "العناصر",
+                    "description": null,
+                    "labelHTML": null,
+                    "item_label": null,
+                    "icon": "sicon-list-add",
+                    "fields": [
+                        {
+                            "id": "title1",
+                            "key": "95be6ae5-9fb0-4ef9-8b40-f0b9662340a1",
+                            "type": "string",
+                            "format": "text",
+                            "label": "العنوان الاول",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "العنوان الاول",
+                            "icon": "sicon-format-text-alt",
+                            "value": null,
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": 6,
+                            "maxLength": 30
+                        },
+                        {
+                            "id": "title2",
+                            "key": "4f7fbb0c-4982-46be-8978-0e727d938e0e",
+                            "type": "string",
+                            "format": "text",
+                            "label": "العنوان الثاني",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "العنوان الثاني",
+                            "icon": "sicon-format-text-alt",
+                            "value": null,
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": 6,
+                            "maxLength": 30
+                        },
+                        {
+                            "id": "title3",
+                            "key": "85d7ada9-4a9e-4d95-9a32-71c2151df3b0",
+                            "type": "string",
+                            "format": "text",
+                            "label": "العنوان الثالث",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "العنوان الثالث",
+                            "icon": "sicon-format-text-alt",
+                            "value": null,
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": 6,
+                            "maxLength": 30
+                        },
+                        {
+                            "id": "small_image",
+                            "key": "8a231dea-15f2-4c8f-8781-cf056850f255",
+                            "type": "string",
+                            "format": "image",
+                            "label": "الصورة الصغيره",
+                            "description": "الصورة الصغيره",
+                            "labelHTML": null,
+                            "placeholder": "e.g. https://hostname.com/image.png",
+                            "icon": "sicon-image",
+                            "value": null,
+                            "required": false
+                        },
+                        {
+                            "id": "big_image",
+                            "key": "10e61a63-45a6-453f-8177-55528a6f27c6",
+                            "type": "string",
+                            "format": "image",
+                            "label": "Image 1",
+                            "description": "الصورة الكبيره",
+                            "labelHTML": null,
+                            "placeholder": "e.g. https://hostname.com/image.png",
+                            "icon": "sicon-image",
+                            "value": null,
+                            "required": false
+                        }
+                    ],
+                    "value": [],
+                    "required": false,
+                    "minLength": 1,
+                    "maxLength": 5
+                }
+            ]
         }
     ],
     "support_url": null,
