@@ -728,6 +728,13 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "cf2d56cf-4d1f-4a02-aacc-7661f0eb4f08",
+            "title": "mt-slider",
+            "icon": "sicon-store",
+            "path": "home.mt-slider",
+            "fields": []
         }
     ],
     "support_url": null,
