@@ -865,7 +865,7 @@
             "fields": [
                 {
                     "id": "bg_image",
-                    "key": "8e90d226-65b6-4781-b622-11d852a9c7c3",
+                    "key": "f177fabf-b573-4c34-a3b1-2e0555e255d7",
                     "type": "string",
                     "format": "image",
                     "label": "Image",
@@ -878,7 +878,7 @@
                 },
                 {
                     "id": "border_color",
-                    "key": "95ed4190-3259-418b-9b3b-7da09f2ca7c5",
+                    "key": "af248f12-fe05-446f-92cc-0ea8f7ccfc52",
                     "type": "string",
                     "format": "color",
                     "inputType": "color",
@@ -891,7 +891,7 @@
                 },
                 {
                     "id": "bg-color",
-                    "key": "faaf53f9-a257-4a2d-bf95-80a0e49632d2",
+                    "key": "5e895b95-ce29-40d0-8dff-bb5585f0c1ec",
                     "type": "string",
                     "format": "color",
                     "inputType": "color",
@@ -904,7 +904,7 @@
                 },
                 {
                     "id": "items",
-                    "key": "d6b93dde-fc67-47a2-abd8-ee3b770c24ec",
+                    "key": "e683a697-b545-4a02-a490-29c35008a906",
                     "type": "collection",
                     "format": "collection",
                     "label": "العناصر",
@@ -915,7 +915,7 @@
                     "fields": [
                         {
                             "id": "head1",
-                            "key": "ba9f7062-99b0-4949-b9da-8fa188246604",
+                            "key": "fa39a41a-ec70-47db-8544-d7484d62d3b6",
                             "type": "string",
                             "format": "text",
                             "label": "النص الاول",
@@ -931,7 +931,7 @@
                         },
                         {
                             "id": "paragraph",
-                            "key": "fc89fb3c-a83f-472b-8d91-7a39a1e0b4e1",
+                            "key": "32ec696b-8f73-4761-9304-3a84efafb104",
                             "type": "string",
                             "format": "text",
                             "label": "النص الثاني",
@@ -947,7 +947,7 @@
                         },
                         {
                             "id": "icon",
-                            "key": "f06fec94-845d-4c0a-aad6-35c0c65632d3",
+                            "key": "bb08f327-e0f7-4799-9c11-58526ca770df",
                             "type": "string",
                             "format": "image",
                             "label": "icon",
