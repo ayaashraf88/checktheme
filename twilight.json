@@ -862,7 +862,84 @@
             "title": "our-special",
             "icon": "sicon-store",
             "path": "home.our-special",
-            "fields": []
+            "fields": [
+                {
+                    "id": "bg_image",
+                    "key": "349d498e-0cf6-4841-9f2f-ef99f262d01b",
+                    "type": "string",
+                    "format": "image",
+                    "label": "Image",
+                    "description": "الصورة الكبيرة",
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://hostname.com/image.png",
+                    "icon": "sicon-image",
+                    "value": null,
+                    "required": false
+                },
+                {
+                    "id": "collection",
+                    "key": "c32fc8a1-4d06-4471-b85d-afc4b0e943a4",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "Collection",
+                    "description": null,
+                    "labelHTML": null,
+                    "item_label": null,
+                    "icon": "sicon-list-add",
+                    "fields": [
+                        {
+                            "id": "head1",
+                            "key": "e6ea85a6-33b0-4d58-b4c0-1f6ad4ae6059",
+                            "type": "string",
+                            "format": "text",
+                            "label": "النص الاول",
+                            "description": "النص الاول",
+                            "labelHTML": null,
+                            "placeholder": "النص الاول",
+                            "icon": "sicon-format-text-alt",
+                            "value": null,
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": 6,
+                            "maxLength": 30
+                        },
+                        {
+                            "id": "paragraph",
+                            "key": "68c67385-8181-4a58-a137-61b9ec865224",
+                            "type": "string",
+                            "format": "text",
+                            "label": "النص الثاني",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "النص الثاني",
+                            "icon": "sicon-format-text-alt",
+                            "value": null,
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": 6,
+                            "maxLength": 30
+                        },
+                        {
+                            "id": "icon",
+                            "key": "ffcb0ce6-c8e1-43ab-b5e3-8a90221778be",
+                            "type": "string",
+                            "format": "image",
+                            "label": "icon",
+                            "description": "الايقونه",
+                            "labelHTML": null,
+                            "placeholder": "e.g. https://hostname.com/image.png",
+                            "icon": "sicon-image",
+                            "value": null,
+                            "required": false
+                        }
+                    ],
+                    "value": [],
+                    "required": false,
+                    "minLength": 1,
+                    "maxLength": "6",
+                    "defaulted": true
+                }
+            ]
         }
     ],
     "support_url": null,
