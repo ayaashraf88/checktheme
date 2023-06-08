@@ -520,15 +520,15 @@ function goToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 $(document).ready(function () {
-  $(".hiddenData").hide();
-  $(".contentChange").click(function () {
-    var id = $(this).attr("data-content");
-    $(".sliderUpData").fadeOut();
-    $("." + id + "_data").fadeIn();
-    console.log();
-  });
   $("#to-top-button").click(function () {
     goToTop();
+  });
+  $(".hiddenData").hide();
+  $('.responsive').on('click', '.contentChange', function() {
+    var id = $(this).attr("data-content");
+    $(".sliderUpData").hide();
+    $("." + id + "_data").show(); 
+    console.log("." + id + "_data");
   });
   $(".responsive").slick({
     dots: true,
@@ -567,6 +567,7 @@ $(document).ready(function () {
       // instead of a settings object
     ],
   });
+  
   $(".prductsResponsive").slick({
     dots: true,
     arrows: false,

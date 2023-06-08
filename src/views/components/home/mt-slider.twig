@@ -18,7 +18,7 @@
 						<p class="title1">{{item.title1}}</p>
 						<p class="title2">{{item.title2}}</p>
 						<p class="title3">{{item.title3}}</p>
-						<a class="btn mb-2 w-80">shop now</a>
+						<a class="btn mb-2 w-80" id="link">shop now</a>
 					</div>
 					<div class="image  col-lg-6 col-sm-12">
 						<img src="{{item.big_image}}">
@@ -30,7 +30,7 @@
 						<p class="title1">{{item.title1}}</p>
 						<p class="title2">{{item.title2}}</p>
 						<p class="title3">{{item.title3}}</p>
-						<a class="btn mb-2 w-80">{{item.button_title}}</a>
+						<a class="btn mb-2 w-80" id="link">{{item.button_title}}</a>
 					</div>
 					<div class="image col-lg-6 col-sm-12">
 						<img src="{{item.big_image}}">
@@ -46,12 +46,18 @@
 		{% for item in component.items %}
 
 			<div class="imageSlider">
-				<img src="{{item.small_image}}" class="contentChange" data-content="{{loop.index}}">
+				{# <div class="hi cursor-pointer text-fuchsia-200">aya
+				</div> #}
+				<img src="{{item.small_image}}" class="contentChange" id="name" data-content="{{loop.index}}">
 			</div>
 		{% endfor %}
 	</div>
 
 </div>
-<script>
 
+<script>
+	$(document).ready(function () {
+
+
+});
 </script>

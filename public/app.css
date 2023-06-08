@@ -802,6 +802,7 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .text-red-400{--tw-text-opacity:1;color:rgba(248, 113, 113, 1);color:rgba(248, 113, 113, var(--tw-text-opacity))}
 .text-red-500{--tw-text-opacity:1;color:rgba(239, 68, 68, 1);color:rgba(239, 68, 68, var(--tw-text-opacity))}
 .text-white{--tw-text-opacity:1;color:rgba(255, 255, 255, 1);color:rgba(255, 255, 255, var(--tw-text-opacity))}
+.text-fuchsia-200{--tw-text-opacity:1;color:rgba(245, 208, 254, 1);color:rgba(245, 208, 254, var(--tw-text-opacity))}
 .underline{text-decoration-line:underline}
 .line-through{text-decoration-line:line-through}
 .\!opacity-100{opacity:1 !important}
@@ -6664,18 +6665,15 @@ body a {
 }
 .sliderUpData .text .title1 {
   font-size: 32px;
-  color: #231f1e;
-  color: var(--main-text-color);
+  color: white;
 }
 .sliderUpData .text .title2 {
   font-size: 60px;
-  color: #231f1e;
-  color: var(--main-text-color);
+  color: white;
 }
 .sliderUpData .text .title3 {
   font-size: 20px;
-  color: #231f1e;
-  color: var(--main-text-color);
+  color: white;
 }
 .sliderUpData .text a {
   background-color: #414042;
@@ -6718,6 +6716,7 @@ body a {
 .bottomDivSlider {
   background-color: #414042;
   background-color: var(--color-primary);
+  margin-bottom: 300px;
 }
 @media only screen and (min-width: 375px) {
   .sliderUpData .image {

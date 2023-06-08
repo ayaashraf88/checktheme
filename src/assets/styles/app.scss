@@ -730,15 +730,15 @@ body {
     text-align: center;
     .title1 {
       font-size: 32px;
-      color: $main-text-color;
+      color: white;
     }
     .title2 {
       font-size: 60px;
-      color: $main-text-color;
+      color: white;
     }
     .title3 {
       font-size: 20px;
-      color: $main-text-color;
+      color: white;
     }
     a{
         background-color: $main-color;
@@ -779,6 +779,7 @@ body {
 }
 .bottomDivSlider{
     background-color: $main-color;
+    margin-bottom: 300px;
 }
 @media only screen and (min-width: 375px) {
   .sliderUpData {
