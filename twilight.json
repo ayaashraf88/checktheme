@@ -856,6 +856,13 @@
                     "maxLength": 5
                 }
             ]
+        },
+        {
+            "key": "cf68c1b2-4928-4877-8502-4e53fd4a5d39",
+            "title": "our-special",
+            "icon": "sicon-store",
+            "path": "home.our-special",
+            "fields": []
         }
     ],
     "support_url": null,
