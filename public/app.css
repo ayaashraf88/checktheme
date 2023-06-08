@@ -789,6 +789,7 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .text-\[\#999999\]{--tw-text-opacity:1;color:rgba(153, 153, 153, 1);color:rgba(153, 153, 153, var(--tw-text-opacity))}
 .text-amber-400{--tw-text-opacity:1;color:rgba(251, 191, 36, 1);color:rgba(251, 191, 36, var(--tw-text-opacity))}
 .text-dark{--tw-text-opacity:1;color:rgba(29, 31, 31, 1);color:rgba(29, 31, 31, var(--tw-text-opacity))}
+.text-fuchsia-200{--tw-text-opacity:1;color:rgba(245, 208, 254, 1);color:rgba(245, 208, 254, var(--tw-text-opacity))}
 .text-gray-200{--tw-text-opacity:1;color:rgba(229, 231, 235, 1);color:rgba(229, 231, 235, var(--tw-text-opacity))}
 .text-gray-400{--tw-text-opacity:1;color:rgba(156, 163, 175, 1);color:rgba(156, 163, 175, var(--tw-text-opacity))}
 .text-gray-500{--tw-text-opacity:1;color:rgba(107, 114, 128, 1);color:rgba(107, 114, 128, var(--tw-text-opacity))}
@@ -802,7 +803,6 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .text-red-400{--tw-text-opacity:1;color:rgba(248, 113, 113, 1);color:rgba(248, 113, 113, var(--tw-text-opacity))}
 .text-red-500{--tw-text-opacity:1;color:rgba(239, 68, 68, 1);color:rgba(239, 68, 68, var(--tw-text-opacity))}
 .text-white{--tw-text-opacity:1;color:rgba(255, 255, 255, 1);color:rgba(255, 255, 255, var(--tw-text-opacity))}
-.text-fuchsia-200{--tw-text-opacity:1;color:rgba(245, 208, 254, 1);color:rgba(245, 208, 254, var(--tw-text-opacity))}
 .underline{text-decoration-line:underline}
 .line-through{text-decoration-line:line-through}
 .\!opacity-100{opacity:1 !important}
@@ -6657,9 +6657,6 @@ body a {
     margin-right: 0px;
   }
 }
-.sliderUpData {
-  margin-top: 200px;
-}
 .sliderUpData .text {
   text-align: center;
 }
@@ -6716,9 +6713,11 @@ body a {
 .bottomDivSlider {
   background-color: #414042;
   background-color: var(--color-primary);
-  margin-bottom: 300px;
 }
 @media only screen and (min-width: 375px) {
+  .sliderUpData {
+    margin-top: 100px;
+  }
   .sliderUpData .image {
     width: 500px;
     height: 400px;
@@ -6734,6 +6733,9 @@ body a {
   }
 }
 @media only screen and (min-width: 550px) {
+  .sliderUpData {
+    margin-top: 200px;
+  }
   .sliderUpData .image {
     width: 508px;
     height: 600px;
