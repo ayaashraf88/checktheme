@@ -965,6 +965,13 @@
                     "maxLength": "6"
                 }
             ]
+        },
+        {
+            "key": "a475e419-6d81-464e-94bb-f156b49e555e",
+            "title": "deal-of-the-day",
+            "icon": "sicon-store",
+            "path": "home.deal-of-the-day",
+            "fields": []
         }
     ],
     "support_url": null,
