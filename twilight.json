@@ -737,7 +737,7 @@
             "fields": [
                 {
                     "id": "bg_image",
-                    "key": "43df24ae-e044-4845-ac46-5d22dd4e58b7",
+                    "key": "816e0a83-9c54-4083-85ba-58a72d82390a",
                     "type": "string",
                     "format": "image",
                     "label": "Image",
@@ -750,7 +750,7 @@
                 },
                 {
                     "id": "items",
-                    "key": "a99639c8-9b9e-4114-a375-86581b6d43c8",
+                    "key": "95b46c3c-4c01-4e00-a636-adbdf8cbe11c",
                     "type": "collection",
                     "format": "collection",
                     "label": "العناصر",
@@ -761,7 +761,7 @@
                     "fields": [
                         {
                             "id": "title1",
-                            "key": "7b759751-a692-4139-addd-1467dc70d175",
+                            "key": "18d18e29-cdf9-448e-99a6-f6ac2612f601",
                             "type": "string",
                             "format": "text",
                             "label": "العنوان الاول",
@@ -777,7 +777,7 @@
                         },
                         {
                             "id": "title2",
-                            "key": "84e6730a-5a4e-4d65-964b-0183d9715904",
+                            "key": "e601cc1e-7d7d-419a-92cc-0eda66050f42",
                             "type": "string",
                             "format": "text",
                             "label": "العنوان الثاني",
@@ -793,7 +793,7 @@
                         },
                         {
                             "id": "title3",
-                            "key": "478b1c33-4432-4efe-8405-6ab5974951eb",
+                            "key": "bb0cfb08-5af2-484b-b359-2cb8c161a6c8",
                             "type": "string",
                             "format": "text",
                             "label": "العنوان الثالث",
@@ -808,8 +808,24 @@
                             "maxLength": 30
                         },
                         {
+                            "id": "button_title",
+                            "key": "446d9802-201d-48ab-ba6d-c687bb588886",
+                            "type": "string",
+                            "format": "text",
+                            "label": "نص الزر",
+                            "description": "النص الذي سوف يظهر على الزر",
+                            "labelHTML": null,
+                            "placeholder": "نص الزر",
+                            "icon": "sicon-format-text-alt",
+                            "value": null,
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": 6,
+                            "maxLength": 30
+                        },
+                        {
                             "id": "small_image",
-                            "key": "d5428f50-bb9f-416f-ae0b-e87eb3383086",
+                            "key": "a2757c8d-ca60-4a06-95e3-2de60d911324",
                             "type": "string",
                             "format": "image",
                             "label": "الصورة الصغيره",
@@ -822,7 +838,7 @@
                         },
                         {
                             "id": "big_image",
-                            "key": "0120d5fe-9954-4a67-8d56-0c4c2b931b7f",
+                            "key": "87ff5bc4-8658-4611-ac28-4438e4d17318",
                             "type": "string",
                             "format": "image",
                             "label": "الصورة الكبيره",
