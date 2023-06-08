@@ -2,83 +2,56 @@
 | Variable                      | Type      | Description                                                         |
 |-------------------------------|-----------|---------------------------------------------------------------------|
 | items                         | array     | shared variable in all layout, index.twig, and all components views |
-| items[].title                 | string    | Section title                                                       |
-| items[].name                  | string    | Alias for title                                                     |
-| items[].type                  | string    | category,most_sales,latest_products,chosen_products                 |
-| items[].featured_product      | Product   |                                                                     |
-| items[].special_product.id    | string    | Product string id                                                   |
-| items[].special_product.title | string    | Product Name                                                        |
-| items[].products[]            | Product[] |                                                                     |
-| items[].limit                 | Int       | Number of products to be shown                                      |
-| items[].id                    | String    | Section id                                                          |
-| postion                       | int       | Sorting number starts from zero                                     |
-| is_slider                     | Bool      | Products should be movable or static                                |
+| items[].title1                | string    | Section title                                                       |
+| items[].title2                | string    | Alias for title                                                     |
+| items[].title3                | string    | category,most_sales,latest_products,chosen_products                 |
+| items[].bg_image              | Product   |                                                                     |
+| items[].big_image             | string    | Product string id                                                   |
+| items[].small_image           | string    | Product Name                                                        |                            |
 #}
 <div class="h-screen " style="background-image: url('{{ component.bg_image }}');">
 	<div class="mx-auto container  text-right">
 		{% for item in component.items %}
-			<div class="row">
-				<div class="text">
-					<p>{{item.title1}}</p>
-					<p>{{item.title2}}</p>
-					<p>{{item.title3}}</p>
-					<button class="btn">shop now</button>
+			{% if loop.first %}
+				<div class="row {{loop.index}}_data sliderUpData" data-id="{{loop.index}}">
+					<div class="text col-lg-6 col-sm-12">
+						<p class="title1">{{item.title1}}</p>
+						<p class="title2">{{item.title2}}</p>
+						<p class="title3">{{item.title3}}</p>
+						<a class="btn mb-2 w-80">shop now</a>
+					</div>
+					<div class="image  col-lg-6 col-sm-12">
+						<img src="{{item.big_image}}">
+					</div>
 				</div>
-				<div class="image w-24">
-					<img src="{{item.big_image}}">
+			{% else %}
+				<div class="row {{loop.index}}_data sliderUpData hiddenData" data-id="{{loop.index}}">
+					<div class="text  col-lg-6 col-sm-12">
+						<p class="title1">{{item.title1}}</p>
+						<p class="title2">{{item.title2}}</p>
+						<p class="title3">{{item.title3}}</p>
+						<a class="btn mb-2 w-80">{{item.button_title}}</a>
+					</div>
+					<div class="image col-lg-6 col-sm-12">
+						<img src="{{item.big_image}}">
+					</div>
 				</div>
-			</div>
+			{% endif %}
+
 		{% endfor %}
 	</div>
 </div>
-<div class="h-80 bg-slate-900 text-right">
+<div class="h-80  text-right bottomDivSlider">
 	<div class="responsive">
 		{% for item in component.items %}
 
 			<div class="imageSlider">
-				<img src="{{item.small_image}}">
+				<img src="{{item.small_image}}" class="contentChange" data-content="{{loop.index}}">
 			</div>
 		{% endfor %}
 	</div>
 
 </div>
 <script>
-	$(document).ready(function () {
-$('.responsive').slick({
-  dots: true,
-  infinite: false,
-  speed: 300,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-});
 
-});
 </script>
