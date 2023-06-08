@@ -6719,8 +6719,10 @@ body a {
     margin-top: 100px;
   }
   .sliderUpData .image {
-    width: 500px;
-    height: 400px;
+    width: 500px !important;
+  }
+  .sliderUpData .image {
+    height: 500px;
   }
   .sliderUpData .image img {
     width: 100%;
@@ -6737,7 +6739,9 @@ body a {
     margin-top: 200px;
   }
   .sliderUpData .image {
-    width: 508px;
+    max-width: 508px !important;
+  }
+  .sliderUpData .image {
     height: 600px;
   }
   .sliderUpData .image img {

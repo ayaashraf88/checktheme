@@ -1,0 +1,17 @@
+{#
+| Variable                      | Type      | Description                                                         |
+|-------------------------------|-----------|---------------------------------------------------------------------|
+| items                         | array     | shared variable in all layout, index.twig, and all components views |
+| items[].title1                | string    | Section title                                                       |
+| items[].title2                | string    | Alias for title                                                     |
+| items[].title3                | string    | category,most_sales,latest_products,chosen_products                 |
+| items[].bg_image              | Product   |                                                                     |
+| items[].big_image             | string    | Product string id                                                   |
+| items[].small_image           | string    | Product Name                                                        |                            |
+#}
+<div class="" >
+{{items|length}}
+</div>
+
+
+
