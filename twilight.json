@@ -865,7 +865,7 @@
             "fields": [
                 {
                     "id": "bg_image",
-                    "key": "d6027655-c9b5-4861-b37c-568998bdca05",
+                    "key": "38c9e392-20d7-474e-9f64-d8961c432cec",
                     "type": "string",
                     "format": "image",
                     "label": "Image",
@@ -877,11 +877,37 @@
                     "required": false
                 },
                 {
+                    "id": "border_color",
+                    "key": "d1c8f137-952c-4bf1-b6b0-32a47f806fb9",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "لون البوردر",
+                    "description": "لون البوردر",
+                    "labelHTML": null,
+                    "icon": "sicon-format-fill",
+                    "value": "#004956",
+                    "required": false
+                },
+                {
+                    "id": "color",
+                    "key": "3385e613-dc99-4a1a-acbb-ea05cac025c1",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "لون الخلفيه",
+                    "description": "لون الخلفيه",
+                    "labelHTML": null,
+                    "icon": "sicon-format-fill",
+                    "value": "#004956",
+                    "required": false
+                },
+                {
                     "id": "items",
-                    "key": "18287694-26da-4423-8266-de43e2a20198",
+                    "key": "52af4980-4154-4e06-b108-2864924b0bce",
                     "type": "collection",
                     "format": "collection",
-                    "label": "Collection",
+                    "label": "العناصر",
                     "description": null,
                     "labelHTML": null,
                     "item_label": null,
@@ -889,7 +915,7 @@
                     "fields": [
                         {
                             "id": "head1",
-                            "key": "054dad73-adb9-4dc3-98e8-70410701f0fa",
+                            "key": "7e02e83b-3574-4cee-9a68-0005e76384f2",
                             "type": "string",
                             "format": "text",
                             "label": "النص الاول",
@@ -905,7 +931,7 @@
                         },
                         {
                             "id": "paragraph",
-                            "key": "ee34943b-90f8-4ba1-97d0-75f1bd55ba7e",
+                            "key": "ce267056-5bec-4e44-9821-7924895ca30d",
                             "type": "string",
                             "format": "text",
                             "label": "النص الثاني",
@@ -921,7 +947,7 @@
                         },
                         {
                             "id": "icon",
-                            "key": "21958289-35b6-48cf-8212-f735eb69f06e",
+                            "key": "24127fe1-003b-442f-95e2-208d5f039b4e",
                             "type": "string",
                             "format": "image",
                             "label": "icon",
@@ -937,6 +963,106 @@
                     "required": false,
                     "minLength": 1,
                     "maxLength": "6"
+                }
+            ]
+        },
+        {
+            "key": "a475e419-6d81-464e-94bb-f156b49e555e",
+            "title": "deal-of-the-day",
+            "icon": "sicon-store",
+            "path": "home.deal-of-the-day",
+            "fields": [
+                {
+                    "id": "image",
+                    "key": "69826243-4702-4bc1-80eb-b11b3f7ccd3a",
+                    "type": "string",
+                    "format": "image",
+                    "label": "Image",
+                    "description": "الصورة",
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://hostname.com/image.png",
+                    "icon": "sicon-image",
+                    "value": null,
+                    "required": false
+                },
+                {
+                    "id": "head",
+                    "key": "fa000223-49f7-4cc9-9a43-b160c4c0b510",
+                    "type": "string",
+                    "format": "text",
+                    "label": "العنوان",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": "العنوان",
+                    "icon": "sicon-format-text-alt",
+                    "value": null,
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": 30
+                },
+                {
+                    "id": "paragraph",
+                    "key": "d6b4610c-1369-488c-9f8a-a0bf112efaa8",
+                    "type": "string",
+                    "format": "text",
+                    "label": "المحتوى",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": "المحتوى",
+                    "icon": "sicon-format-text-alt",
+                    "value": null,
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": 30
+                },
+                {
+                    "id": "url",
+                    "key": "f741a7b1-667a-4c02-bdaa-05523a5cc2dc",
+                    "type": "string",
+                    "format": "url",
+                    "inputType": "url",
+                    "label": "URL",
+                    "description": "نص الزر",
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://salla.sa",
+                    "icon": "sicon-link",
+                    "value": null,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": 30,
+                    "defaulted": true
+                },
+                {
+                    "id": "color",
+                    "key": "3854118d-bb5d-4e57-9802-fd8ce3b8b44e",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "Color",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-format-fill",
+                    "value": "#004956",
+                    "required": false,
+                    "defaulted": true
+                },
+                {
+                    "id": "products",
+                    "key": "cac50a71-d7d0-40c0-949d-9b3f16247b40",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "Dropdown List",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-keyboard_arrow_down",
+                    "selected": [],
+                    "options": [],
+                    "source": "Products",
+                    "multichoice": true,
+                    "searchable": true,
+                    "required": false
                 }
             ]
         }
