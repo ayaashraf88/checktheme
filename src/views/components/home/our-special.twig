@@ -9,9 +9,41 @@
 | items[].big_image             | string    | Product string id                                                   |
 | items[].small_image           | string    | Product Name                                                        |                            |
 #}
-<div class="" >
-{{component.bg_image}}
+<div class=" mt-5 ">
+	<div class=" container text-right" id="ourSpecial">
+		<div class="flex  justify-between firstContent" class="">
+			{% for item in component.items[0:3] %}
+
+				<div class="flex content mb-4" >
+					<div style="display: flex;
+														    justify-content: center;
+														    align-items: center;border: 5px {{component.border_color}} solid;  border-radius: 50%;background-color:{{component.color}};padding:5px  ">
+						<div class="icon" style=""><img src="{{item.icon}}"></div>
+					</div>
+					<div>
+						<h4>{{item.head1}}</h4>
+						<p>{{item.paragraph}}</p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="flex mt-2 mb-2 image" class="">
+			<img src="{{component.bg_image}}">
+		</div>
+		<div class="flex  justify-between secondContent" class="">
+			{% for item in component.items[3:] %}
+				<div class="flex content">
+					<div style="display: flex;
+														    justify-content: center;
+														    align-items: center;border: 5px {{component.border_color}} solid;  border-radius: 50%;background-color:{{component.color}};padding:5px  ">
+						<div class="icon" style=""><img src="{{item.icon}}"></div>
+					</div>
+					<div>
+						<h4>{{item.head1}}</h4>
+						<p>{{item.paragraph}}</p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
 </div>
-
-
-

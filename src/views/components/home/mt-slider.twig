@@ -10,29 +10,29 @@
 | items[].small_image           | string    | Product Name                                                        |                            |
 #}
 <div class="h-screen " style="background-image: url('{{ component.bg_image }}');">
-	<div class="mx-auto container  text-right">
+	<div class="container  text-right">
 		{% for item in component.items %}
 			{% if loop.first %}
-				<div class="row {{loop.index}}_data sliderUpData" data-id="{{loop.index}}">
-					<div class="text col-lg-6 col-sm-12">
+				<div class="flex {{loop.index}}_data sliderUpData" data-id="{{loop.index}}">
+					<div class="text ">
 						<p class="title1">{{item.title1}}</p>
 						<p class="title2">{{item.title2}}</p>
 						<p class="title3">{{item.title3}}</p>
 						<a class="btn mb-2 w-80" id="link">shop now</a>
 					</div>
-					<div class="image  col-lg-6 col-sm-12">
+					<div class="image  ">
 						<img src="{{item.big_image}}">
 					</div>
 				</div>
 			{% else %}
-				<div class="row {{loop.index}}_data sliderUpData hiddenData" data-id="{{loop.index}}">
-					<div class="text  col-lg-6 col-sm-12">
+				<div class="flex {{loop.index}}_data sliderUpData hiddenData" data-id="{{loop.index}}">
+					<div class="text  ">
 						<p class="title1">{{item.title1}}</p>
 						<p class="title2">{{item.title2}}</p>
 						<p class="title3">{{item.title3}}</p>
 						<a class="btn mb-2 w-80" id="link">{{item.button_title}}</a>
 					</div>
-					<div class="image col-lg-6 col-sm-12">
+					<div class="image ">
 						<img src="{{item.big_image}}">
 					</div>
 				</div>
