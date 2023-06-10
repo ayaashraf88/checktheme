@@ -9,6 +9,130 @@
 | items[].big_image             | string    | Product string id                                                   |
 | items[].small_image           | string    | Product Name                                                        |                            |
 #}
-<div class=" mt-5 ">
-{{component.color}}
+<div class=" mt-5 flex " id="dealOftheDay">
+	<div class="flex Firstcontent ">
+		{% for product in component.products[0:2] %}
+
+			<div class="max-w-sm mb-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" id="productCard">
+				{% for image in product.images %}
+					{% if loop.first %}
+						<a href="{{product.url}}" style="text-decoration:none; color:black">
+							<div class="cardImage ">
+								<img src="{{image.url}}" class="rounded-t-lg" alt="...">
+								<div id="hover" class="flex flex-row">
+									<div>
+
+										<button class="btn " onclick="salla.wishlist.toggle({{ product.id }})" data-id="{{ product.id }}">
+
+											<i class="fa-solid fa-heart "></i>
+										</button>
+									</div>
+
+									<div class="  {{ product.status == " out" ? " disabled" : " "
+																																																																													                      }}">
+										<salla-add-product-button product-id="{{product.id}}" class="btn" product-status="{{product.status}}" product-type="{{product.type}}">
+											{{
+                                          product.type == "booking"
+                                           ? '<i class="sicon-calendar-date"></i>'
+                                               : '<i class="fas fa-shopping-cart"></i>'
+                                         }}
+										</salla-add-product-button>
+									</div>
+								</div>
+
+							</div>
+						</a>
+					{% endif %}
+				{% endfor %}
+
+				<div class="p-3 flex flex-col items-center">
+					<a href="#" class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+						{{product.name}}
+					</a>
+					<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+						<div class="rating_and_discount ">
+							<div class="discount ">-
+								{{product.discount_percentage|number_format }}
+								%</div>
+
+						</div>
+					</p>
+					<p class="mb-3 font-normal text-gray-700 dark:text-gray-400 first">
+						{{ product.price|money }}
+						<span class="middle mr-2">
+							{{ product.regular_price|money }}</span>
+					</p>
+				</div>
+			</div>
+
+
+		{% endfor %}
+	</div>
+	<div class="middleImage mb-2">
+		<img src="{{component.image}}">
+		<div class="overImage mx-auto">
+			<h2>{{component.head}}</h2>
+			<p>{{component.paragraph}}</p>
+			<a class="btn" href="{{component.url}}" style="background-color:{{component.color}}">shop now</a>
+		</div>
+	</div>
+	<div class="flex Secondcontent" id="">
+
+		{% for product in component.products[0:2] %}
+			<div class="max-w-sm mb-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" id="productCard">
+				{% for image in product.images %}
+					{% if loop.first %}
+						<a href="{{product.url}}" style="text-decoration:none; color:black">
+							<div class="cardImage ">
+								<img src="{{image.url}}" class="rounded-t-lg" alt="...">
+								<div id="hover" class="flex flex-row">
+									<div>
+
+										<button class="btn " onclick="salla.wishlist.toggle({{ product.id }})" data-id="{{ product.id }}">
+
+											<i class="fa-solid fa-heart "></i>
+										</button>
+									</div>
+
+									<div class="  {{ product.status == " out" ? " disabled" : " "
+																																																																													                      }}">
+										<salla-add-product-button product-id="{{product.id}}" class="btn" product-status="{{product.status}}" product-type="{{product.type}}">
+											{{
+                                              product.type == "booking"
+                                             ? '<i class="sicon-calendar-date"></i>'
+                                          : '<i class="fas fa-shopping-cart"></i>'
+                                              }}
+										</salla-add-product-button>
+									</div>
+								</div>
+
+							</div>
+						</a>
+					{% endif %}
+				{% endfor %}
+
+				<div class="p-3 flex flex-col items-center">
+					<a href="#" class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+						{{product.name}}
+					</a>
+					<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+						<div class="rating_and_discount ">
+							<div class="discount ">-
+								{{product.discount_percentage|number_format }}
+								%</div>
+
+						</div>
+					</p>
+					<p class="mb-3 font-normal text-gray-700 dark:text-gray-400 first">
+						{{ product.price|money }}
+						<span class="middle mr-2">
+							{{ product.regular_price|money }}</span>
+					</p>
+				</div>
+			</div>
+
+		{% endfor %}
+	</div>
+	{# <salla-products-slider source="selected" source-value="[{{ component.products|map((product) => product.id)|join(',') }}]" display-all-url="{{component.display_all_url}}" block-title=" " slider-id="slider-with-bg-{{ position }}"></salla-products-slider> #}
+
 </div>

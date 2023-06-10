@@ -315,11 +315,34 @@ class ProductCard extends HTMLElement {
     }
 
     // Append host classes and id
-    this.classList.add("card");
-    this.setAttribute("data-aos", "fade-down-left");
-    this.setAttribute("data-aos-duration", "1500");
-    this.setAttribute("data-aos-anchor-placement", "center-center");
-    this.id = `product_${this.product.id}`;
+    this.classList.add(
+      "max-w-sm"
+    );
+    this.classList.add(
+      "mb-2"
+    );
+    this.classList.add(
+      "bg-white"
+    );
+    this.classList.add(
+      "border"
+    );
+    this.classList.add(
+      "border-gray-200"
+    );
+    this.classList.add(
+      "rounded-lg"
+    );
+    this.classList.add(
+      "shadow"
+    );
+    this.classList.add(
+      "card"
+    );
+    // this.setAttribute("data-aos", "fade-down-left");
+    // this.setAttribute("data-aos-duration", "1500");
+    // this.setAttribute("data-aos-anchor-placement", "center-center");
+    this.id = `productCard`;
     if (this.product.is_out_of_stock) {
       this.classList.add("is-out");
     }
@@ -352,16 +375,38 @@ class ProductCard extends HTMLElement {
 
     this.innerHTML = `
        
-          <div class="product-block__thumb">
       
-            <a href="${this.product.url}" class="thumb-wrapper" aria-label="${
+            <a href="${
+              this.product.url
+            }" style="text-decoration:none; color:black" aria-label="${
       this.product.name
     }">
-            <div class="prodImage mx-auto"><img class="lazy-load"  src="${"images/img_loader.png"}" data-src="${
+            <div class="cardImage "><img class="rounded-t-lg" alt="..."  src="${this.product.image.url}" data-src="${
       this.product.image.url
-    }" alt="${this.product.image.alt}" /></div>
+    }" alt="${this.product.image.alt}" />
+    <div id="hover" class="flex flex-row">
+    <div>
+
+      <button class="btn " onclick="salla.wishlist.toggle(${ this.product.id })" data-id="${ this.product.id }">
+
+        <i class="fa-solid fa-heart "></i>
+      </button>
+    </div>
+
+    <div class="  ${ this.product.status == " out" ? " disabled" : " "}">
+      <salla-add-product-button product-id="${ this.product.id }" class="btn" product-status="${this.product.status}" product-type="${this.product.type}">
+        ${
+                                this.product.type == "booking"
+                               ? '<i class="sicon-calendar-date"></i>'
+                            : '<i class="fas fa-shopping-cart"></i>'
+                                }
+      </salla-add-product-button>
+    </div>
+  </div>
+    
+    </div>
             </a>
-          </div>
+
           ${
             this.showWishlist
               ? `<span class="btn--product-like">
@@ -371,22 +416,15 @@ class ProductCard extends HTMLElement {
                 </span>`
               : ""
           }
-          <div class=" wide donating-wrap">
-            <div class="card-body">
-              <a href="${this.product.url}" class="product-title">
-                <h2 class="title title--primary title--small">${
+          <div class="p-3 flex flex-col items-center">
+        
+              <a href="${this.product.url}" class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              ${
                   this.product.name
-                }</h2>
+                }
                 <p>${!!this.product.subtitle ? this.product.subtitle : ""}</p>
               </a>
-              <div class="rating_and_discount ">
-								<div class="discount ">-
-                ${Math.ceil(
-                  (this.product.sale_price / this.product.regular_price) * 100
-                )}
-									%</div>
-
-							</div>
+         
               ${
                 this.product.calories
                   ? `<div class="font-sm mt-5 mb-10">
@@ -420,10 +458,15 @@ class ProductCard extends HTMLElement {
                       } </span>
                     </div>
                   </div>
-                </div>`
+`
                 : ""
             }
-      <div class="flex justify-between	 items-center">
+      <div class="rating_and_discount mb-3">
+      <div class="discount ">-
+      ${Math.ceil((this.product.sale_price / this.product.regular_price) * 100)}
+        %</div>
+
+    </div>
             <div class="price-wrapper">
               ${
                 this.product.is_on_sale
@@ -441,59 +484,6 @@ class ProductCard extends HTMLElement {
                     )}</span>`
                   : `<span>${salla.money(this.product.price)}</span>`
               }</div>
-
-                ${
-                  !this.hideAddBtn
-                    ? `<div class="  ${
-                        this.product.status == "out" ? "disabled" : ""
-                      }">
-                    <salla-add-product-button
-                        
-                        product-id="${this.product.id}"
-                        product-status="${this.product.status}"
-                        product-type="${this.product.type}">
-                        ${
-                          this.product.type == "booking"
-                            ? '<i class="sicon-calendar-date"></i>'
-                            : '<i class="fas fa-shopping-cart"></i>'
-                        }
-                    </salla-add-product-button>
-                  </div>
-                  </div>
-                  `
-                    : ""
-                }
-      <div class="container topBadge" style="">
-
-      ${
-        this.product.promotion_title == "جديد"
-          ? `
-        <div class="flex flex-row justify-between" id="newInfo">
-									<div class="newBadge ml-5 ">${this.product.promotion_title}</div>
-									<div
-										class="favourite mr-5">
-										<salla-button shape="icon" color="black" fill="none" aria-label="Add or remove to wishlist" class="btn--wishlist animated " onclick="salla.wishlist.toggle(${this.product.id})" data-id="${this.product.id}">
-											<i class="fa-regular fa-heart"></i>
-										</salla-button>
-									</div>
-								</div>`
-          : !this.product.promotion_title
-          ? `<div class=" lg:flex flex-row justify-end " id="newInfo">
-        <div class="favourite ">
-          <salla-button shape="icon" color="black" fill="none" aria-label="Add or remove to wishlist" class="btn--wishlist animated " onclick="salla.wishlist.toggle(${this.product.id})" data-id="${this.product.id}">
-            <i class="fa-regular fa-heart"></i>
-          </salla-button>
-        </div>
-      </div>`
-          : this.showQuantity && this.product.quantity
-          ? `<span class="badge badge--ribbon badge--primary">${remained} ${this.product.quantity}</span>`
-          : this.showQuantity && this.product.is_out_of_stock
-          ? `<div class="out-badge ${
-              this.horizontal ? "" : "max-w-[calc(100%-60px)]"
-            }">${outOfStock}</div>`
-          : ""
-      }
-      </div>
       `;
     document.lazyLoadInstance?.update(
       document.querySelectorAll(".product-block__thumb .lazy-load")
@@ -523,11 +513,14 @@ $(document).ready(function () {
   $("#to-top-button").click(function () {
     goToTop();
   });
+  if($(window).height()<=750){
+    $(".sliderUpData  .image").css("width","140px !important");
+  }
   $(".hiddenData").hide();
-  $('.responsive').on('click', '.contentChange', function() {
+  $(".responsive").on("click", ".contentChange", function () {
     var id = $(this).attr("data-content");
     $(".sliderUpData").hide();
-    $("." + id + "_data").show(); 
+    $("." + id + "_data").show();
     console.log("." + id + "_data");
   });
   $(".responsive").slick({
@@ -567,7 +560,7 @@ $(document).ready(function () {
       // instead of a settings object
     ],
   });
-  
+
   $(".prductsResponsive").slick({
     dots: true,
     arrows: false,
