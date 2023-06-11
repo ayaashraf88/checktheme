@@ -767,16 +767,7 @@ body {
     color: white;
   }
 }
-.imageSlider {
-  width: 146px !important;
-  height: 160px !important;
-  margin: 0px 10px !important;
-  img {
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-  }
-}
+
 .bottomDivSlider {
   background-color: $main-color;
 }
@@ -871,12 +862,21 @@ body {
     margin-top: 2px;
   }
 }
+@media screen and (max-width: 375px), 
+       screen and (max-height: 700px) {
+        .sliderUpData {
+          margin-top: 0px !important;
+          height: 300px;
+          justify-content: unset !important;
+        }
+}
 @media only screen and (min-width: 375px) {
   .sliderUpData {
     margin-top: 100px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  
     .image {
       width: 300px ;
       height: 300px;
@@ -962,13 +962,24 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+   
     .image {
-      max-width: 508px !important;
+      max-width: 508px;
       height: 600px;
       img {
         width: 100%;
         height: 100%;
       }
+    }
+  }
+  .imageSlider {
+    width: 146px !important;
+    height: 160px !important;
+    margin: 0px 10px !important;
+    img {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
     }
   }
   .responsive {
